@@ -1,0 +1,22 @@
+# OS X
+
+.DS_Store
+
+
+# Xcode
+
+*.mode1v3
+*.pbxuser
+*.perspectivev3
+*.xccheckout
+xcuserdata
+
+
+# Misc
+
+# output file of `appledoc`
+docset-installed.txt
+
+
+# Would usually ignore, but leaving in for the CocoaPods.
+# *.xcworkspace
