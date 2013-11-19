@@ -21,6 +21,10 @@
 		D2438AF2183BB7DC0049D036 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2438AD4183BB7DB0049D036 /* UIKit.framework */; };
 		D2438AFA183BB7DC0049D036 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2438AF8183BB7DC0049D036 /* InfoPlist.strings */; };
 		D2438AFC183BB7DC0049D036 /* CDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2438AFB183BB7DC0049D036 /* CDTests.m */; };
+		D2438B07183BB7F10049D036 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2438B05183BB7F10049D036 /* Model.xcdatamodeld */; };
+		D2438B0F183BB9020049D036 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2438B0E183BB9020049D036 /* CoreData.framework */; };
+		D2438B18183BBC610049D036 /* Child.m in Sources */ = {isa = PBXBuildFile; fileRef = D2438B17183BBC610049D036 /* Child.m */; };
+		D2438B1B183BBC620049D036 /* Parent.m in Sources */ = {isa = PBXBuildFile; fileRef = D2438B1A183BBC620049D036 /* Parent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		D2438AF7183BB7DC0049D036 /* CDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CDTests-Info.plist"; sourceTree = "<group>"; };
 		D2438AF9183BB7DC0049D036 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2438AFB183BB7DC0049D036 /* CDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDTests.m; sourceTree = "<group>"; };
+		D2438B06183BB7F10049D036 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D2438B0E183BB9020049D036 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D2438B16183BBC610049D036 /* Child.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Child.h; sourceTree = "<group>"; };
+		D2438B17183BBC610049D036 /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
+		D2438B19183BBC620049D036 /* Parent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parent.h; sourceTree = "<group>"; };
+		D2438B1A183BBC620049D036 /* Parent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2438B0F183BB9020049D036 /* CoreData.framework in Frameworks */,
 				D2438AD3183BB7DB0049D036 /* CoreGraphics.framework in Frameworks */,
 				D2438AD5183BB7DB0049D036 /* UIKit.framework in Frameworks */,
 				D2438AD1183BB7DB0049D036 /* Foundation.framework in Frameworks */,
@@ -101,6 +112,7 @@
 		D2438ACF183BB7DB0049D036 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2438B0E183BB9020049D036 /* CoreData.framework */,
 				D2438AD0183BB7DB0049D036 /* Foundation.framework */,
 				D2438AD2183BB7DB0049D036 /* CoreGraphics.framework */,
 				D2438AD4183BB7DB0049D036 /* UIKit.framework */,
@@ -117,6 +129,11 @@
 				D2438AE2183BB7DC0049D036 /* Main.storyboard */,
 				D2438AE5183BB7DC0049D036 /* NYTViewController.h */,
 				D2438AE6183BB7DC0049D036 /* NYTViewController.m */,
+				D2438B05183BB7F10049D036 /* Model.xcdatamodeld */,
+				D2438B19183BBC620049D036 /* Parent.h */,
+				D2438B1A183BBC620049D036 /* Parent.m */,
+				D2438B16183BBC610049D036 /* Child.h */,
+				D2438B17183BBC610049D036 /* Child.m */,
 				D2438AE8183BB7DC0049D036 /* Images.xcassets */,
 				D2438AD7183BB7DB0049D036 /* Supporting Files */,
 			);
@@ -250,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2438B18183BBC610049D036 /* Child.m in Sources */,
 				D2438AE1183BB7DC0049D036 /* NYTAppDelegate.m in Sources */,
 				D2438AE7183BB7DC0049D036 /* NYTViewController.m in Sources */,
 				D2438ADD183BB7DB0049D036 /* main.m in Sources */,
+				D2438B07183BB7F10049D036 /* Model.xcdatamodeld in Sources */,
+				D2438B1B183BBC620049D036 /* Parent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +402,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CD/CD-Prefix.pch";
 				INFOPLIST_FILE = "CD/CD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +416,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CD/CD-Prefix.pch";
 				INFOPLIST_FILE = "CD/CD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -471,6 +493,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2438B05183BB7F10049D036 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2438B06183BB7F10049D036 /* Model.xcdatamodel */,
+			);
+			currentVersion = D2438B06183BB7F10049D036 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D2438AC5183BB7DB0049D036 /* Project object */;
 }
